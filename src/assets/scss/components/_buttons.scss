@@ -1,0 +1,15 @@
+button {
+    color: $color-white;
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.button-green {
+    background-color: $color-green;
+}
+
+.button-grey {
+    background-color: $color-black-4;
+}

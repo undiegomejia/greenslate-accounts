@@ -1,25 +1,25 @@
-.report{
+.report {
     background-color: $color-black-2;
     padding: 1rem;
     border-radius: 3px;
     text-align: center;
     margin-top: 2rem;
-    box-shadow: 0 0 2rem $color-black-2;
-    & .amounts-container{
+    box-shadow: 0 0 2rem $color-black-3;
+    & .amounts-container {
         display: flex;
         padding: 2rem;
-        justify-content: space-between;
+        justify-content: space-evenly;
         flex-wrap: wrap;
         @include respond(tab-land) {
             justify-content: center;
         }
-        & .amounts{
+        & .amounts {
             display: block;
             text-align: left;
             position: relative;
             padding: 0 1rem 0 1rem;
             margin: 1rem;
-            &__number{
+            &__number {
                 display: block;
                 font-size: 24px;
                 font-weight: 600;
@@ -28,7 +28,7 @@
                 position: relative;
                 top: -10px;
             }
-            &__detail{
+            &__detail {
                 display: block;
                 font-size: 13px;
                 font-weight: 500;
@@ -36,7 +36,7 @@
                 position: relative;
                 top: 5px;
             }
-            &:before{
+            &:before {
                 content: '';
                 border-right: solid 3px $color-yellow;
                 position: absolute;
@@ -47,4 +47,3 @@
         }
     }
 }
-

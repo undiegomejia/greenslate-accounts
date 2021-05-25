@@ -1,0 +1,176 @@
+.accounts {
+    display: grid;
+    padding: 2rem 0;
+    grid-template-columns: 350px 1fr;
+    grid-template-rows: 50px 1fr 0;
+    grid-template-areas: "header header" "nav info" "nav info";
+    &__header {
+        display: flex;
+        justify-content: flex-end;
+        grid-area: header;
+        align-items: flex-end;
+        &--nav li {
+            display: inline-block;
+            border-bottom: solid 4px;
+            font-size: 1.5rem;
+            padding: 0.4rem 2rem;
+            min-width: 20rem;
+            text-align: left;
+            height: 37px;
+            cursor: pointer;
+            transition: all 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            &:hover {
+                min-width: 22rem;
+            }
+            &:nth-child(even) {
+                background-color: $color-black-1;
+            }
+            &:nth-child(odd) {
+                background-color: $color-black-2;
+            }
+            &.nav--green {
+                border-color: $color-green;
+            }
+            &.nav--blue {
+                border-color: $color-blue;
+            }
+            &.nav--purple {
+                border-color: $color-purple;
+            }
+            &.nav--red {
+                border-color: $color-red;
+            }
+            &.nav--yellow {
+                border-color: $color-yellow;
+            }
+        }
+    }
+    &__accounts {
+        background-color: $color-black;
+        padding: 2rem;
+        grid-area: nav;
+        &--list li {
+            font-size: 13px;
+            list-style: none;
+            text-align: center;
+            padding: 1.2rem 0;
+            border-bottom: solid 1px $color-black-3;
+            &.active {
+                & a {
+                    color: $color-green;
+                    font-weight: bold;
+                    cursor: text;
+                }
+            }
+        }
+        &--navigation {
+            display: block;
+            text-align: center;
+            padding: 1rem 0 0;
+            & li {
+                list-style: none;
+                display: inline-block;
+                margin: 0 1px;
+                &.active button {
+                    background-color: $color-green;
+                }
+                & button {
+                    background-color: $color-black-4;
+                    width: 30px;
+                    height: 30px;
+                }
+                &.pagination-next,
+                &.pagination-prev {
+                    cursor: pointer;
+                    position: relative;
+                    top: 8px;
+                }
+            }
+        }
+    }
+    &__info {
+        padding: 5rem 4rem;
+        background-color: $color-black-2;
+        &--header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            border-bottom: solid 1px $color-black-4;
+            grid-area: infoheader;
+            & .title {
+                font-size: 17px;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+            & .details {
+                margin-left: 1rem;
+                color: $color-grey;
+                font-size: 13px;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+            & .status {
+                color: $color-grey;
+                font-size: 15px;
+                font-weight: bold;
+                text-transform: uppercase;
+                float: right;
+                & span.active {
+                    color: $color-green;
+                }
+            }
+        }
+        &--main {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            grid-template-rows: 50px 1fr 50px;
+            padding: 2rem;
+            & .description {
+                color: $color-grey;
+                font-size: 15px;
+                & .description-account {
+                    font-weight: 500;
+                    color: $color-white;
+                    font-size: 17px;
+                    text-transform: uppercase;
+                }
+            }
+            & .reports {
+                display: flex;
+                align-items: baseline;
+                & .amounts {
+                    display: block;
+                    text-align: left;
+                    position: relative;
+                    padding: 0 1rem 0 1rem;
+                    margin: 1rem;
+                    &__number {
+                        display: block;
+                        font-size: 20px;
+                        font-weight: 600;
+                        color: $color-white;
+                        height: 20px;
+                        position: relative;
+                        top: -10px;
+                    }
+                    &__detail {
+                        display: block;
+                        font-size: 10px;
+                        font-weight: 500;
+                        color: $color-grey;
+                        position: relative;
+                        top: 0;
+                    }
+                    &:before {
+                        content: '';
+                        border-right: solid 3px $color-green;
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
