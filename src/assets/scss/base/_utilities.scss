@@ -1,0 +1,58 @@
+.clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+.txt-c {
+  text-align: center;
+}
+
+.txt-l {
+  text-align: left;
+}
+.txt-r {
+  text-align: right;
+}
+
+.mt-s {
+  margin-top: 1rem;
+}
+
+.mt-m {
+  margin-top: 3rem;
+}
+
+.mt-g {
+  margin-top: 10rem;
+}
+
+.mt-b {
+  margin-top: 5rem;
+}
+
+.mb-s {
+  margin-bottom: 1rem;
+}
+
+.mb-m {
+  margin-bottom: 3rem;
+}
+
+.mb-b {
+  margin-bottom: 5rem;
+}
+
+.hidding {
+  transform: translateY(8rem);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.showing {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
