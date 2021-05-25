@@ -3,7 +3,7 @@
 On this Code Challenge, my task was to redesign an Account Dashboard to test my abilities in HTML, CSS, UX Design and UI Design.
 I started using the platform on how it was, and I noticed a lot of things that should have to be redesigned. In my process I started thinking more about how I can improve the way that every action was told by the user.
 So I thought the best way was to think more about components and try to reach a more atomic design way of doing this project.
-## The Components
+## The components
 So I started doing wireframes and listing the following components:
 * **The Header:** In here we will have the main title as well as some options buttons that have: Currency, Location and Date. This header will be displayed fixed in mobile for better user experience.
 * **The Totals Report:** This component will show the total reports of all accounts, as a main information for the user this will be shown at the beginning of the application.
