@@ -15,7 +15,9 @@
             @include respond(phone) {
                 font-size: 13px;
             }
-            & a {
+            & button {
+                color: $color-grey;
+                background-color: transparent;
                 display: block;
                 &:hover {
                     color: $color-grey;
@@ -24,8 +26,10 @@
             & .icon {
                 display: block;
                 margin: 0 auto;
+                color: $color-grey-2;
             }
             & .icon-text {
+                margin-top: 0.5rem;
                 display: block;
                 text-align: center;
             }
