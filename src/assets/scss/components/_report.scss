@@ -1,0 +1,50 @@
+.report{
+    background-color: $color-black-2;
+    padding: 1rem;
+    border-radius: 3px;
+    text-align: center;
+    margin-top: 2rem;
+    box-shadow: 0 0 2rem $color-black-2;
+    & .amounts-container{
+        display: flex;
+        padding: 2rem;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @include respond(tab-land) {
+            justify-content: center;
+        }
+        & .amounts{
+            display: block;
+            text-align: left;
+            position: relative;
+            padding: 0 1rem 0 1rem;
+            margin: 1rem;
+            &__number{
+                display: block;
+                font-size: 24px;
+                font-weight: 600;
+                color: $color-yellow;
+                height: 20px;
+                position: relative;
+                top: -10px;
+            }
+            &__detail{
+                display: block;
+                font-size: 13px;
+                font-weight: 500;
+                color: $color-grey;
+                position: relative;
+                top: 5px;
+            }
+            &:before{
+                content: '';
+                border-right: solid 3px $color-yellow;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+            }
+        }
+    }
+}
+
