@@ -13,6 +13,13 @@
         @include respond(tab-land) {
             justify-content: center;
         }
+        @include respond(tab-port) {
+            display: grid;
+            grid-template-columns: 50% 1fr;
+        }
+        @include respond(phone) {
+            padding: 1rem;
+        }
         & .amounts {
             display: block;
             text-align: left;
@@ -27,6 +34,9 @@
                 height: 20px;
                 position: relative;
                 top: -10px;
+                @include respond(phone) {
+                    font-size: 18px;
+                }
             }
             &__detail {
                 display: block;
@@ -35,6 +45,9 @@
                 color: $color-grey;
                 position: relative;
                 top: 5px;
+                @include respond(phone) {
+                    font-size: 13px;
+                }
             }
             &:before {
                 content: '';

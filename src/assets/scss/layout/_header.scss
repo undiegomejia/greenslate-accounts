@@ -1,27 +1,49 @@
-.header{
-  font-weight: 300;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  &__options{
-    &--icon{
-      display: inline-block;
-      padding: 0.5rem;
-      text-align: center;
-      & a{
-        display: block;
-        &:hover{
-          color: $color-grey;
-        }
-      }
-      & .icon{
-        display: block;
-        margin: 0 auto;
-      }
-      & .icon-text{
+.header {
+    font-weight: 300;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include respond(phone) {
         display: block;
         text-align: center;
-      }
     }
-  }
+    &__options {
+        &--icon {
+            display: inline-block;
+            padding: 0.5rem;
+            text-align: center;
+            @include respond(phone) {
+                font-size: 13px;
+            }
+            & a {
+                display: block;
+                &:hover {
+                    color: $color-grey;
+                }
+            }
+            & .icon {
+                display: block;
+                margin: 0 auto;
+            }
+            & .icon-text {
+                display: block;
+                text-align: center;
+            }
+        }
+        @include respond(phone) {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: $color-black-2;
+            text-align: center;
+            z-index: 9;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            border-top: solid 1px $color-black-4;
+            box-shadow: 0 -2rem 8rem $color-black;
+        }
+    }
 }

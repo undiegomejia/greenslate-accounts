@@ -1,25 +1,26 @@
 *,
 *::after,
 *::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
 }
 
 html {
-  // Define REM
-  font-size: 62.5%;
+    // Define REM
+    font-size: 62.5%;
 }
 
 body {
-  box-sizing: border-box;
-  background-color: $color-black-3;
-  background-position: center center;
-  background-attachment: fixed;
-  height: 100vh;
-  padding: 2rem;
+    box-sizing: border-box;
+    background-color: $color-black-3;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 100vh;
+    padding: 2rem;
+    position: relative;
 }
 
-hr{
-  border-color: $color-grey;
+hr {
+    border-color: $color-grey;
 }

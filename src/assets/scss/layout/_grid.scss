@@ -2,6 +2,9 @@
     max-width: $grid-width;
     margin: 0 auto;
     padding: 0 2rem;
+    @include respond(phone) {
+        padding: 0
+    }
 }
 
 .row {

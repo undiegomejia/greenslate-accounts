@@ -4,11 +4,19 @@
     grid-template-columns: 350px 1fr;
     grid-template-rows: 50px 1fr 0;
     grid-template-areas: "header header" "nav info" "nav info";
+    @include respond(tab-land) {
+        grid-template-rows: 217px 1fr;
+        grid-template-columns: auto 1fr;
+        grid-template-areas: "header header" "nav nav" "info info";
+    }
     &__header {
         display: flex;
         justify-content: flex-end;
         grid-area: header;
         align-items: flex-end;
+        @include respond(tab-land) {
+            display: block
+        }
         &--nav li {
             display: inline-block;
             border-bottom: solid 4px;
@@ -19,8 +27,13 @@
             height: 37px;
             cursor: pointer;
             transition: all 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-            &:hover {
-                min-width: 22rem;
+            @include respond(tab-land) {
+                display: block;
+                min-width: auto;
+                padding: 0.4rem 0.5rem;
+                height: 43px;
+                text-align: center;
+                font-size: 17px;
             }
             &:nth-child(even) {
                 background-color: $color-black-1;
@@ -44,11 +57,20 @@
                 border-color: $color-yellow;
             }
         }
+        &--options {
+            display: flex;
+            @include respond(tab-land) {
+                display: none;
+            }
+        }
     }
     &__accounts {
         background-color: $color-black;
         padding: 2rem;
         grid-area: nav;
+        @include respond(phone) {
+            padding: 1rem;
+        }
         &--list li {
             font-size: 13px;
             list-style: none;
@@ -67,6 +89,9 @@
             display: block;
             text-align: center;
             padding: 1rem 0 0;
+            @include respond(phone) {
+                margin-bottom: 2rem;
+            }
             & li {
                 list-style: none;
                 display: inline-block;
@@ -78,6 +103,10 @@
                     background-color: $color-black-4;
                     width: 30px;
                     height: 30px;
+                    @include respond(phone) {
+                        width: 25px;
+                        height: 25px;
+                    }
                 }
                 &.pagination-next,
                 &.pagination-prev {
@@ -91,6 +120,20 @@
     &__info {
         padding: 5rem 4rem;
         background-color: $color-black-2;
+        grid-area: info;
+        position: relative;
+        @include respond(phone) {
+            padding: 5rem 1rem;
+        }
+        &--options {
+            display: none;
+            @include respond(tab-land) {
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
         &--header {
             display: flex;
             justify-content: space-between;
@@ -115,29 +158,39 @@
                 font-weight: bold;
                 text-transform: uppercase;
                 float: right;
+                @include respond(phone) {
+                    font-size: 11px;
+                }
                 & span.active {
                     color: $color-green;
                 }
             }
         }
         &--main {
-            display: grid;
-            grid-template-columns: 350px 1fr;
-            grid-template-rows: 50px 1fr 50px;
-            padding: 2rem;
             & .description {
                 color: $color-grey;
                 font-size: 15px;
                 & .description-account {
                     font-weight: 500;
                     color: $color-white;
-                    font-size: 17px;
+                    font-size: 15px;
                     text-transform: uppercase;
+                    @include respond(phone) {
+                        display: block;
+                    }
                 }
             }
             & .reports {
                 display: flex;
                 align-items: baseline;
+                flex-wrap: wrap;
+                margin-bottom: 4rem;
+                justify-content: center;
+                margin-top: 2rem;
+                @include respond(tab-port) {
+                    display: grid;
+                    grid-template-columns: 50% 1fr;
+                }
                 & .amounts {
                     display: block;
                     text-align: left;
@@ -152,6 +205,9 @@
                         height: 20px;
                         position: relative;
                         top: -10px;
+                        @include respond(phone) {
+                            font-size: 17px;
+                        }
                     }
                     &__detail {
                         display: block;
