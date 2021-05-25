@@ -103,7 +103,7 @@
                     <button class="button-grey"><span class="icon material-icons">
                       tune
                       </span></button>
-                    <button class="button-green"><span class="icon material-icons">
+                    <button class="button-green button-settings"><span class="icon material-icons">
                         settings
                         </span></button>
                 </div>
@@ -153,11 +153,48 @@
                 </div>
             </div>
             <div class="accounts__info">
+                <div class="settings">
+                    <h2>Settings</h2>
+                    <form class="modal__form" action="#">
+                        <p>
+                            <input type="checkbox" id="allprojects" />
+                            <label for="allprojects">Show All Projects</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="sets" />
+                            <label for="sets">Show Sets</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="uncommited" />
+                            <label for="uncommited">Show uncommited POs</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="inactive" />
+                            <label for="inactive">Show inactive</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="zeros" />
+                            <label for="zeros">Supress zeros</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="etcs" />
+                            <label for="etcs">Negative ETCs</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="efcs" />
+                            <label for="efcs">Negative EFCs</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="ye" />
+                            <label for="ye">Show YE</label>
+                        </p>
+                    </form>
+                </div>
                 <div class="accounts__info--options">
                     <button class="button-grey"><span class="icon material-icons">
                   tune
                   </span></button>
-                    <button class="button-green"><span class="icon material-icons">
+                    <button class="button-green button-settings"><span class="icon material-icons">
                     settings
                     </span></button>
                 </div>
@@ -262,6 +299,7 @@
             </div>
         </section>
     </div>
+
 </body>
 
 </html>
