@@ -62,6 +62,19 @@
             @include respond(tab-land) {
                 display: none;
             }
+            & button:hover .tooltip {
+                display: block;
+            }
+            & .tooltip {
+                display: none;
+                background: $color-black-1;
+                margin-left: 28px;
+                padding: 10px;
+                position: absolute;
+                z-index: 11111111;
+                width: auto;
+                border-radius: 3px;
+            }
         }
     }
     &__accounts {

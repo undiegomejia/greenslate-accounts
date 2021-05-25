@@ -13,3 +13,14 @@ btnSetting.forEach(function(e) {
         showSetting()
     })
 })
+
+const tooltip = document.querySelectorAll('.tooltip');
+
+document.addEventListener('mousemove', fn, false);
+
+function fn(e) {
+    for (let i = tooltip.length; i--;) {
+        tooltip[i].style.left = e.pageX - 150 + 'px';
+        tooltip[i].style.top = e.pageY - 20 + 'px';
+    }
+}
