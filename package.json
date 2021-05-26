@@ -1,7 +1,7 @@
 {
-  "name": "casinobytes",
+  "name": "greenslate",
   "version": "1.0.0",
-  "description": "casinobytes",
+  "description": "greenslate",
   "main": "gulpfile.babel.js",
   "scripts": {
     "start": "gulp",
