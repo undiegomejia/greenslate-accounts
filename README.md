@@ -14,14 +14,5 @@ So I started doing wireframes and listing the following components:
 ## The process
 I started by writing the list of elements and components as I show. Later on I create wireframes to have a general idea on how my design will be displayed. After this, I create a Figma file using Material Design Icons to help me get a better UX. You can check the [Figma file here](https://www.figma.com/file/F6biMPFcdNXbsovhkJ0jie/GreenSlate?node-id=1%3A2)
 
-### Before
-![Before](https://undiegomejia.com/github/greenslate/before.jpg)
-
-### Wireframes
-<img src="https://undiegomejia.com/github/greenslate/wireframes.jpg" width="500">
-
-### After
-![After](https://undiegomejia.com/github/greenslate/after.jpg)
-
 ## DEMO
-You can try a demo [here](https://undiegomejia.com/github/greenslate/index.html)
+You can try a demo [here](https://undiegomejia.github.io/greenslate-accounts/)
